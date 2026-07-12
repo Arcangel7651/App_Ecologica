@@ -4,6 +4,20 @@ Aplicación móvil desarrollada en Flutter que reúne, en un solo lugar, la
 organización de actividades de conservación ambiental, un mercado de segunda
 mano y un foro de preguntas y respuestas para una comunidad ecológica.
 
+## Contexto
+
+Proyecto académico desarrollado para la asignatura de **TSP (Team Software
+Process)** en la **Universidad Autónoma de Zacatecas**. Se trabajó en equipo
+(IguanoSquad, 4 integrantes) siguiendo un proceso formal de ingeniería de
+software: levantamiento de requisitos, diseño, implementación, pruebas y
+validación por iteraciones.
+
+El equipo se organizó con roles definidos según TSP: líder de equipo, líder de
+calidad, líder de colaboración y líder técnico. Mi rol fue el de **líder
+técnico**, responsable de las decisiones de arquitectura y diseño de la
+solución, la coordinación técnica del desarrollo y la revisión del trabajo del
+equipo. La documentación de ingeniería está en la carpeta [`docs/`](docs/).
+
 ## Stack / Tecnologías
 
 - **Lenguaje:** Dart (SDK `>=3.3.3 <4.0.0`)
@@ -18,10 +32,6 @@ mano y un foro de preguntas y respuestas para una comunidad ecológica.
   - `app_links` — manejo de deep links
   - `flutter_launcher_icons` — generación del icono de la app
 - **Calidad de código:** `flutter_lints`
-
-> Nota: `shared_preferences` se utiliza en el código pero no está declarado en
-> `pubspec.yaml`. Debe añadirse a las dependencias para poder compilar (ver
-> sección *Cómo ejecutarlo*).
 
 ## Características principales
 
@@ -43,8 +53,9 @@ mano y un foro de preguntas y respuestas para una comunidad ecológica.
 ## Cómo ejecutarlo
 
 Requisitos previos: tener instalado el [SDK de Flutter](https://docs.flutter.dev/get-started/install)
-(Dart `>=3.3.3`) y un proyecto de Supabase con las tablas correspondientes
-`[POR CONFIRMAR: esquema de base de datos]`.
+(Dart `>=3.3.3`) y un proyecto de Supabase con las tablas correspondientes. El
+esquema de la base de datos está documentado en el
+[SDD](docs/IguanoSquad_Iteracion_3/IguanoSquad_SDD_V3.0.pdf).
 
 1. Clonar el repositorio:
 
@@ -59,13 +70,7 @@ Requisitos previos: tener instalado el [SDK de Flutter](https://docs.flutter.dev
    flutter pub get
    ```
 
-3. Añadir `shared_preferences` a las dependencias (necesario para compilar):
-
-   ```bash
-   flutter pub add shared_preferences
-   ```
-
-4. Crear el archivo `.env` a partir de la plantilla y completar los valores
+3. Crear el archivo `.env` a partir de la plantilla y completar los valores
    reales desde el panel de Supabase (*Project Settings → API*):
 
    ```bash
@@ -80,11 +85,25 @@ Requisitos previos: tener instalado el [SDK de Flutter](https://docs.flutter.dev
    | `SUPABASE_ANON_KEY` | Llave pública `anon` |
    | `SUPABASE_STORAGE_BUCKET` | Nombre del bucket de imágenes (por defecto `markedplace`) |
 
-5. Ejecutar la aplicación en un emulador o dispositivo conectado:
+4. Ejecutar la aplicación en un emulador o dispositivo conectado:
 
    ```bash
    flutter run
    ```
+
+## Documentación
+
+Documentación de ingeniería del proyecto, disponible en la carpeta
+[`docs/`](docs/):
+
+- [Problemática (Design Thinking)](docs/IguanoSquad_Design_Thinking/IguanoSquad_Problem%C3%A1tica_v1.0.pdf) — planteamiento del problema
+- [Planeación del proyecto](docs/IguanoSquad_Planeaci%C3%B3n_Proyecto/IguanoSquad_Planeaci%C3%B3n_Proyecto_v1.1.pdf) — alcance y planificación
+- [SRS](docs/IguanoSquad_Iteracion_3/IguanoSquad_System_Requirements_Specification_v3.0.pdf) — especificación de requisitos del sistema
+- [SDD](docs/IguanoSquad_Iteracion_3/IguanoSquad_SDD_V3.0.pdf) — documento de diseño de software
+- [Matriz de trazabilidad](docs/IguanoSquad_Iteracion_3/IguanoSquad_MatrizTrazabilidad_v3.0.xlsx) — requisitos vs. casos de uso
+- [Plan de IVV](docs/IguanoSquad_Iteracion_3/IguanoSquad_Plan_IVV_v1.2.pdf) y [casos de prueba](docs/IguanoSquad_Iteracion_3/Pruebas/) — pruebas unitarias e integración
+- [Guía de operación del sistema](docs/IguanoSquad_Iteracion_3/IguanoSquad_guia_de_operacion_del_sistema_v1.1.pdf) — manual de uso
+
 
 ## Estructura del proyecto
 
@@ -99,16 +118,3 @@ lib/
 ├── constants/           Categorías y constantes
 └── atributos/           Datos de usuario en memoria
 ```
-
-## Capturas / Demo
-
-[CAPTURAS / DEMO — pendiente de añadir imágenes o enlace a demo en vivo]
-
----
-
-### Topics sugeridos para GitHub
-
-`flutter` · `dart` · `supabase` · `mobile-app` · `postgresql` · `android` ·
-`ios` · `material-design` · `flutter-dotenv` · `crud`
-</content>
-</invoke>

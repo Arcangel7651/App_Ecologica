@@ -33,6 +33,17 @@ equipo. La documentación de ingeniería está en la carpeta [`docs/`](docs/).
   - `flutter_launcher_icons` — generación del icono de la app
 - **Calidad de código:** `flutter_lints`
 
+## Arquitectura
+
+El proyecto sigue una **arquitectura por capas** que separa datos, acceso a
+datos e interfaz:
+
+- **Modelos** (`models/`): clases de datos con serialización `fromJson`/`toJson`.
+- **Servicios** (`services/`): acceso a datos y lógica contra Supabase (capa de
+  datos).
+- **Vistas** (`screens/`, `widgets/`): interfaz en Flutter con gestión de estado
+  local mediante `setState`.
+
 ## Características principales
 
 - **Autenticación de usuarios:** registro e inicio de sesión con Supabase Auth,

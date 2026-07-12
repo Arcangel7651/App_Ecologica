@@ -1,0 +1,57 @@
+# ==========================================================
+#  Variables de entorno / secretos
+# ==========================================================
+.env
+*.env
+!.env.example
+
+# ==========================================================
+#  Flutter / Dart
+# ==========================================================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+pubspec.lock
+
+# Symbolication / obfuscation
+app.*.symbols
+app.*.map.json
+
+# ==========================================================
+#  IDE
+# ==========================================================
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# ==========================================================
+#  Sistema operativo
+# ==========================================================
+.DS_Store
+Thumbs.db
+
+# ==========================================================
+#  Android
+# ==========================================================
+android/.gradle/
+android/local.properties
+android/key.properties
+android/**/GeneratedPluginRegistrant.java
+**/*.keystore
+**/*.jks
+
+# ==========================================================
+#  iOS
+# ==========================================================
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
